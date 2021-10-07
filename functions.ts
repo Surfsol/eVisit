@@ -4,16 +4,6 @@ type IpObject = {
 
 let ipObject: IpObject = {};
 
-// function hashIp(ip) {
-//     let numString =""
-//     for (let i = 0; i < ip.length; i++) {
-//       const charCode = ip.charCodeAt(i);
-//       let str = charCode.toString()
-//       numString = `${numString}${str}`
-//     }
-//     return Number(numString)
-//   }
-
 // constant time
 function request_handled(ip: string): void {
   if (ipObject[ip]) {
@@ -78,8 +68,9 @@ function quickSort(
   return valuesArray;
 }
 
+// O(n)
 function top100(obj) {
-  let valuesArray: Array<number> = Object.values(obj);   // O(n)
+  let valuesArray: Array<number> = Object.values(obj);
   let bottomValue: number;
   if (valuesArray.length > 3) {
     console.log('in top100');
@@ -95,7 +86,8 @@ function top100(obj) {
   }
 
   let top100Results = [];
-  for (let [key, value] of Object.entries(obj)) { // O(n)
+  // O(n)
+  for (let [key, value] of Object.entries(obj)) {
     if (value >= bottomValue) top100Results.push(key);
   }
   return top100Results;
