@@ -1,7 +1,8 @@
 What would you do differently if you had more time? <br />
-Make a clean HashMap, that would store ip address and their counts<br />
+1. Make a clean HashMap, that would store ip address and their counts<br />
 in a higher bucket if their count increases.  That would make<br />
 sorting and retrieving the top100 ip addresses more efficient.<br />
+
 
 What is the runtime complexity of each function? <br />
 function request_handled : constant time, <br />
